@@ -19,7 +19,7 @@ class JobBox extends React.Component {
 
 	_getData() {
 		const jobList = [
-			{ id: 1, name: "Nancy", title: "Career Advisor" },
+			{ id: 1, name: "Person1", title: "Career Advisor" },
 			{ id: 2, name: "Cisco", title: "Programmer" }
 		];
 
