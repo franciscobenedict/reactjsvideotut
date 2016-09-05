@@ -1,0 +1,152 @@
+//style.scss
+
+body {
+	header {
+		&#headerComponent {
+			background: #ffffff;
+			font-family: 'PT Sans', sans-serif;
+			height: 120px;
+			position: fixed;
+			text-align: left;
+			transition: all 0.4s ease;
+			width: 100%;
+			z-index: 2;
+			
+			.header-section {
+				position: relative;
+				z-index: 2;
+				.logo-and-search {
+					.container {
+						padding: 10px;
+						transition: all 0.4s ease;
+						img {
+							max-height: 100px;
+							transition: all 0.4s ease;
+						}
+					}
+				}
+				nav {
+					&.main-nav {
+						background: #004b88;
+						.container {
+							ul {
+								list-style-type: none;
+								margin: 0;
+								padding: 20px 0;
+								li {
+									color: #ffffff;
+									display: inline;
+									font-size: 16px;
+									padding: 10px 15px;
+									transition: all 0.4s ease;
+								}
+							}
+						}
+					}
+				}
+			}
+
+			&.sticky {
+				height: 50px;
+				transition: all 0.4s ease;
+				.header-section {
+					.logo-and-search {
+						.container {
+							padding: 10px;
+							transition: all 0.4s ease;
+							img {
+								max-height: 30px;
+								transition: all 0.4s ease;
+							}
+						}
+					}
+					nav {
+						&.main-nav {
+							.container {
+								ul {
+									padding: 10px 0;
+									li {
+										font-size: 12px;
+										padding: 10px;
+										transition: all 0.4s ease;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	.container {
+		z-index: 1;
+		&.page-wrap {
+			min-height: 100%;
+			margin-bottom: -150px;
+			&:after {
+				content: "";
+				display: block;
+				height: 150px; 
+			}
+		}
+		#app {
+			margin-top: 200px;
+			padding-bottom: 40px;
+			transition: all 0.4s ease;
+
+			&.sticky-active {
+				margin-top: 140px;
+			}
+
+			.job-box {
+				form {
+					background: #e1e1e1;
+					padding: 20px;
+					&.job-form {
+						.job-form-fields {
+							.job-field {
+								//max-width: 300px;
+								label {
+									padding-bottom: 20px;
+									width: 100%;
+									input, textarea {
+										border: 0;
+										font-weight: 300;
+										padding: 10px;
+										width: 100%;
+									}
+									textarea {
+										height: 200px;
+									}
+								}
+							}
+						}
+						.job-form-actions {}
+					}
+				}
+				h3 {
+				}
+				h4 {}
+				button {}
+				.job-list {
+					margin-top: 40px;
+					.job {
+						background: #f1f1f1;
+						margin-bottom: 20px;
+						padding: 20px;
+					}
+				}
+			}
+		}
+	}
+	footer {
+		background: #b2c9db;
+		height: 150px;
+		&:after {
+			height: 150px;
+		}
+		.container {
+
+		}
+	}
+}
