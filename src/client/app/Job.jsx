@@ -4,10 +4,14 @@ class Job extends React.Component {
 
 	render () {
 		const divStyle = {
-			color: 'blue',
+			color: '#666666',
 			//backgroundImage: 'url(' + imgUrl + ')',
 			WebkitTransition: 'all', // note the capital 'W' here
 			msTransition: 'all' // 'ms' is the only lowercase vendor prefix
+		}
+
+		const detailStyle = {
+			color: 'blue'
 		}
 
 		const aTagBtn = {
@@ -17,11 +21,11 @@ class Job extends React.Component {
 
 		return (
 			<div className="job" style={divStyle}>
-				<p className="time-stamp">Date/Time: {this.props.time}</p>
-				<p className="job-id">ID: {this.props.jobid}</p>
-				<p className="name">Name: {this.props.name}</p>
-				<p className="job-header">Job title {this.props.title}</p>
-				<p className="job-desc">Description: {this.props.desc}</p>
+				<p className="time-stamp">Date/Time: <span style={detailStyle}>{this.props.time}</span></p>
+				<p className="job-id">ID: <span style={detailStyle}>{this.props.jobid}</span></p>
+				<p className="name">Name: <span style={detailStyle}>{this.props.name}</span></p>
+				<p className="job-header">Job title: <span style={detailStyle}>{this.props.title}</span></p>
+				<p className="job-desc">Description: <span style={detailStyle}>{this.props.desc}</span></p>
 				<div className="job-footer">
 					<a href="#"
 						className="btn job-footer-delete"

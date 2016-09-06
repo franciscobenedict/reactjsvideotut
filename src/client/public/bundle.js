@@ -32872,10 +32872,14 @@
 			key: 'render',
 			value: function render() {
 				var divStyle = {
-					color: 'blue',
+					color: '#666666',
 					//backgroundImage: 'url(' + imgUrl + ')',
 					WebkitTransition: 'all', // note the capital 'W' here
 					msTransition: 'all' // 'ms' is the only lowercase vendor prefix
+				};
+	
+				var detailStyle = {
+					color: 'blue'
 				};
 	
 				var aTagBtn = {
@@ -32890,31 +32894,51 @@
 						'p',
 						{ className: 'time-stamp' },
 						'Date/Time: ',
-						this.props.time
+						_react2.default.createElement(
+							'span',
+							{ style: detailStyle },
+							this.props.time
+						)
 					),
 					_react2.default.createElement(
 						'p',
 						{ className: 'job-id' },
 						'ID: ',
-						this.props.jobid
+						_react2.default.createElement(
+							'span',
+							{ style: detailStyle },
+							this.props.jobid
+						)
 					),
 					_react2.default.createElement(
 						'p',
 						{ className: 'name' },
 						'Name: ',
-						this.props.name
+						_react2.default.createElement(
+							'span',
+							{ style: detailStyle },
+							this.props.name
+						)
 					),
 					_react2.default.createElement(
 						'p',
 						{ className: 'job-header' },
-						'Job title ',
-						this.props.title
+						'Job title: ',
+						_react2.default.createElement(
+							'span',
+							{ style: detailStyle },
+							this.props.title
+						)
 					),
 					_react2.default.createElement(
 						'p',
 						{ className: 'job-desc' },
 						'Description: ',
-						this.props.desc
+						_react2.default.createElement(
+							'span',
+							{ style: detailStyle },
+							this.props.desc
+						)
 					),
 					_react2.default.createElement(
 						'div',
